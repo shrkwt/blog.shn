@@ -9,11 +9,11 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
   style-src 'self' 'unsafe-inline';
-  img-src * blob: data: *.unsplash.com;
+  img-src * blob: data: *.unsplash.com *.jsdelivr.net;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app *.youtube.com youtube.com *.dailymotion.com dailymotion.com *.speedynet.eu.org speedynet.eu.org *.vimeo.com vimeo.com
 `
 
 const securityHeaders = [

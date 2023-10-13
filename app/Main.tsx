@@ -30,7 +30,7 @@ export default function Home({ posts }) {
             </span>
           </span>
           <h1 className="text-background-color pt-2 text-4xl font-bold leading-9 tracking-tight dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-snug">
-            Hi, I am
+            <span className="animate-wavingHand">👋🏻</span>, I am
             <span className="font-arrow relative inset-y-8 ml-2 inline-block -rotate-12 text-primary-500 sm:inset-y-14">
               ^
             </span>
