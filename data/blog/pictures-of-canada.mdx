@@ -1,10 +1,9 @@
 ---
 title: O Canada
-date: '2017-07-15'
+date: '2022-09-10'
 tags: ['holiday', 'canada', 'images']
 draft: false
-layout: PostBanner
-images: ['/static/images/canada/mountains.jpg']
+thumbnail: 'https://images.unsplash.com/photo-1488388373205-a134c1cc7e4e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=480&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlLG1vdW50YWlucyx2YWxsZXl8fHx8fHwxNjk3MTk2NDM5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=854'
 summary: The scenic lands of Canada featuring maple leaves, snow-capped mountains, turquoise lakes and Toronto. Take in the sights in this photo gallery exhibition and see how easy it is to replicate with some MDX magic and tailwind classes.
 ---
 
@@ -33,9 +32,15 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
   </div>
 </div>
 
-# Implementation
+<YouTube video="lh8dNmneVyY"/>
 
-```js
+---
+
+# Implementation of Images
+
+Its not too hard to implement these blocks in a post, just use the following available codes
+Implementation of images
+```jsx
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
   <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
     ![Maple](/static/images/canada/maple.jpg)
@@ -51,32 +56,25 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
   </div>
 </div>
 ```
+---
+# Implementation of Embeds
+- ^For efficient youtube embed resulting in least page load :
+```html
+<YouTube video="lh8dNmneVyY"/>
+```
+
+- ^For Custom videos and manifests `(use one only)` :
+```html
+<Spark src="<YOUR_VIDEO_SOURCE>" poster="<YOUR_VIDEO_POSTER>" />
+
+<Clappr src="<YOUR_VIDEO_SOURCE>" poster="<YOUR_VIDEO_POSTER>" />
+```
+
+- ^For best youtube experience add the following parameters :
+```
+?autoplay=0&mute=1&controls=1&origin=https://origin.server&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=3
+```
 
 With MDX v2, one can interleave markdown in jsx as shown in the example code.
+That's all for now.
 
-### Photo Credits
-
-<div>
-  Maple photo by [Guillaume
-  Jaillet](https://unsplash.com/@i_am_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-</div>
-<div>
-  Mountains photo by [John
-  Lee](https://unsplash.com/@john_artifexfilms?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-</div>
-<div>
-  Lake photo by [Tj
-  Holowaychuk](https://unsplash.com/@tjholowaychuk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-</div>
-<div>
-  Toronto photo by [Matthew
-  Henry](https://unsplash.com/@matthewhenry?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-</div>
