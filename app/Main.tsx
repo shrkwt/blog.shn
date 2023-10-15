@@ -62,7 +62,9 @@ export default function Home({ posts }) {
                 <span className="font-arrow relative inset-y-8 ml-2 inline-block -rotate-12 text-primary-500 sm:inset-y-14">
                   ^
                 </span>
-                Shantnu.
+                <span className="absolute">
+                  Shantnu<span className="text-orange-400 ">.</span>
+                </span>
               </h1>
               <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
                 {siteMetadata.description}
