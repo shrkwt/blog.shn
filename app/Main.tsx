@@ -3,7 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import Image from 'next/image'
+import Image from '@/components/Image'
 
 const MAX_DISPLAY = 6
 
@@ -109,7 +109,9 @@ export default function Home({ posts }) {
                     <div className="group relative max-h-4 overflow-hidden rounded-lg pb-60">
                       <Link href={`/blog/${slug}`}>
                         <span>
-                          <img
+                          <Image
+                            objectFit="cover"
+                            layout="fill"
                             alt={title.slice(0, 8)}
                             src={thumbnail}
                             className="absolute inset-0 h-full w-full object-cover "
