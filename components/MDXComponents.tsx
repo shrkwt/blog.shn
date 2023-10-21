@@ -4,12 +4,14 @@ import BlogNewsletterForm from 'pliny/ui/BlogNewsletterForm'
 import type { MDXComponents } from 'mdx/types'
 import Image from './Image'
 import CustomLink from './Link'
-import YouTube from './players/YouTube'
-import Spark from './players/Custom'
+import Youtube from './players/YouTube'
+import Hola from './players/Custom'
+import Hls from './players/Hls'
 
 export const components: MDXComponents = {
-  YouTube,
-  Spark,
+  Youtube,
+  Hola,
+  Hls,
   Image,
   TOCInline,
   a: CustomLink,

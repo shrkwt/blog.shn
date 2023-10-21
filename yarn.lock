@@ -3410,6 +3410,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vidstack/react@npm:next":
+  version: 1.4.4
+  resolution: "@vidstack/react@npm:1.4.4"
+  dependencies:
+    media-captions: ^1.0.0
+  peerDependencies:
+    "@types/react": ^18.0.0
+    react: ^18.0.0
+  checksum: b4a6d3d71291394848ccc380f8117734426e089e3eaf5dc5e172836dba0eb423a70603ad08c55999ecd2494e4709cb3b16531da9b3db76b0d1932ab325390880
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -6501,6 +6513,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hls.js@npm:^1.4.12":
+  version: 1.4.12
+  resolution: "hls.js@npm:1.4.12"
+  checksum: a30c055ea1fc9ee9f4eee1b8b17f7ed7900ebe25e790de4f3097a03afb841cf138d51b67ef27e09700672395e305302d1d68b3b9f6c0bce3c1c6692fad86008c
+  languageName: node
+  linkType: hard
+
 "html-enumerated-attributes@npm:^0.1.0":
   version: 0.1.0
   resolution: "html-enumerated-attributes@npm:0.1.0"
@@ -7864,6 +7883,20 @@ __metadata:
   peerDependencies:
     esbuild: 0.*
   checksum: 3a7e9269d8a6913dc87e5f54856b727230da02b0ae2858dc38398b15480fbf7a62fe43955fb4be2dc9b024bf8e60e08c15611473827287321afe5711bec26d23
+  languageName: node
+  linkType: hard
+
+"media-captions@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "media-captions@npm:1.0.0"
+  checksum: 081c1175807640ae35d31e5c1ae8ee45d1c674fb166f1b79637595bbc44fef42f3f907290814c14e49553e47cbc84c6faf0af7ab94e9902771bb48c79c1c471a
+  languageName: node
+  linkType: hard
+
+"media-icons@npm:next":
+  version: 1.0.0
+  resolution: "media-icons@npm:1.0.0"
+  checksum: 14a321d01d825bcb06c5fbcf42b13471f3b8064ae5a8124ca1e8968e78e9d1720074270c91c51d286a67dc732438e9e21b25e380fe8e5ffd16002172a39ead17
   languageName: node
   linkType: hard
 
@@ -11081,6 +11114,7 @@ __metadata:
     "@types/react": ^18.2.14
     "@typescript-eslint/eslint-plugin": ^6.1.0
     "@typescript-eslint/parser": ^6.1.0
+    "@vidstack/react": next
     autoprefixer: ^10.4.13
     clsx: ^2.0.0
     contentlayer: 0.3.4
@@ -11092,9 +11126,11 @@ __metadata:
     eslint-plugin-prettier: ^5.0.0
     github-slugger: ^1.4.0
     gray-matter: ^4.0.2
+    hls.js: ^1.4.12
     husky: ^8.0.0
     image-size: 1.0.0
     lint-staged: ^13.0.0
+    media-icons: next
     next: 13.5.3
     next-contentlayer: 0.3.4
     next-themes: ^0.2.1

@@ -1,5 +1,7 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
+import '@vidstack/react/player/styles/default/theme.css'
+import '@vidstack/react/player/styles/default/layouts/video.css'
 
 import { Space_Grotesk } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'

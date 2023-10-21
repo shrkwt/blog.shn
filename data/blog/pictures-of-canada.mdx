@@ -1,5 +1,5 @@
 ---
-title: O Canada
+title: Media Example...
 date: '2022-09-10'
 tags: ['holiday', 'canada', 'images']
 draft: false
@@ -32,7 +32,24 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
   </div>
 </div>
 
-<YouTube video="lh8dNmneVyY"/>
+---
+
+# External Players
+
+<Youtube video="lh8dNmneVyY" />
+<Hola
+  poster="https://images.unsplash.com/photo-1556262298-e85892643712?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=480&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8MTY5Nzg3NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=854"
+  src="https://stream.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU.m3u8"
+/>
+
+---
+
+# Internal Player
+
+<Hls
+  thumbnails="https://image.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/storyboard.vtt"
+  src="/static/media/demo.m3u8"
+/>
 
 ---
 
@@ -40,6 +57,7 @@ Since we are using mdx, we can create a simple responsive flexbox grid to displa
 
 Its not too hard to implement these blocks in a post, just use the following available codes
 Implementation of images
+
 ```jsx
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
   <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
@@ -56,25 +74,34 @@ Implementation of images
   </div>
 </div>
 ```
+
 ---
+
 # Implementation of Embeds
-- ^For efficient youtube embed resulting in least page load :
+
+- ^For efficient youtube embeds `(least page load)` :
+
 ```html
-<YouTube video="lh8dNmneVyY"/>
+<YouTube video="lh8dNmneVyY" />
 ```
 
-- ^For Custom videos and manifests `(use one only)` :
-```html
-<Spark src="<YOUR_VIDEO_SOURCE>" poster="<YOUR_VIDEO_POSTER>" />
+- ^For Hls manifests `(based on vidstack)` :
 
-<Clappr src="<YOUR_VIDEO_SOURCE>" poster="<YOUR_VIDEO_POSTER>" />
+```html
+<Hls src="<YOUR_VIDEO_SOURCE>" thumbnails="<YOUR_PREVIEW_THUMBNAILS>" />
+```
+
+- ^For mp4 and others `(based on vidstack)` :
+
+```html
+<Hola src="<YOUR_VIDEO_SOURCE>" poster="<YOUR_POSTER>" />
 ```
 
 - ^For best youtube experience add the following parameters :
+
 ```
 ?autoplay=0&mute=1&controls=1&origin=https://origin.server&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=3
 ```
 
 With MDX v2, one can interleave markdown in jsx as shown in the example code.
 That's all for now.
-

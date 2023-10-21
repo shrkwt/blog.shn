@@ -5,7 +5,7 @@ interface SparkProps {
   src: string
 }
 
-function Spark(props: SparkProps) {
+function Hola(props: SparkProps) {
   const { poster, src } = props
 
   const embedHtml = {
@@ -26,17 +26,19 @@ function Spark(props: SparkProps) {
   }
 
   return (
-    <div className="aspect-w-16 aspect-h-9 mb-4">
-      <iframe
-        title="Video embed"
-        loading="lazy"
-        width="calc(100% - 16px)"
-        allowFullScreen
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        {...embedHtml}
-      ></iframe>
+    <div className="aspect-w-16 aspect-h-9 mb-4 relative">
+      <div className="relative" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          title="Video embed"
+          loading="lazy"
+          className="absolute top-0 left-0 w-full h-full"
+          allowFullScreen
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          {...embedHtml}
+        ></iframe>
+      </div>
     </div>
   )
 }
 
-export default Spark
+export default Hola

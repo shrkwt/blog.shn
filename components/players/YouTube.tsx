@@ -5,7 +5,7 @@ interface YouTubeProps {
   video: string
 }
 
-function YouTube(props: YouTubeProps) {
+function Youtube(props: YouTubeProps) {
   const { video } = props
 
   const embedHtml = {
@@ -27,17 +27,19 @@ function YouTube(props: YouTubeProps) {
   }
 
   return (
-    <div className="aspect-w-16 aspect-h-9 mb-4">
-      <iframe
-        title="Youtube embed"
-        loading="lazy"
-        width="calc(100% - 16px)"
-        allowFullScreen
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        {...embedHtml}
-      ></iframe>
+    <div className="aspect-w-16 aspect-h-9 mb-4 relative">
+      <div className="relative" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          title="Youtube embed"
+          loading="lazy"
+          className="absolute top-0 left-0 w-full h-full"
+          allowFullScreen
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          {...embedHtml}
+        ></iframe>
+      </div>
     </div>
   )
 }
 
-export default YouTube
+export default Youtube
